@@ -1,0 +1,9 @@
+/home/mvelasquez@lanacion.com.ar/Repos/PeopleAdmin/Data/bin/Debug/netstandard2.0/Data.deps.json
+/home/mvelasquez@lanacion.com.ar/Repos/PeopleAdmin/Data/bin/Debug/netstandard2.0/Data.dll
+/home/mvelasquez@lanacion.com.ar/Repos/PeopleAdmin/Data/bin/Debug/netstandard2.0/Data.pdb
+/home/mvelasquez@lanacion.com.ar/Repos/PeopleAdmin/Data/obj/Debug/netstandard2.0/Data.csprojAssemblyReference.cache
+/home/mvelasquez@lanacion.com.ar/Repos/PeopleAdmin/Data/obj/Debug/netstandard2.0/Data.AssemblyInfoInputs.cache
+/home/mvelasquez@lanacion.com.ar/Repos/PeopleAdmin/Data/obj/Debug/netstandard2.0/Data.AssemblyInfo.cs
+/home/mvelasquez@lanacion.com.ar/Repos/PeopleAdmin/Data/obj/Debug/netstandard2.0/Data.csproj.CoreCompileInputs.cache
+/home/mvelasquez@lanacion.com.ar/Repos/PeopleAdmin/Data/obj/Debug/netstandard2.0/Data.dll
+/home/mvelasquez@lanacion.com.ar/Repos/PeopleAdmin/Data/obj/Debug/netstandard2.0/Data.pdb
