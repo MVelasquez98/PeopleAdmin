@@ -15,5 +15,8 @@ namespace Data.Model
             this.Surname = surname;
             this.Age = age;
         }
+        public Person()
+        {
+        }
     }
 }

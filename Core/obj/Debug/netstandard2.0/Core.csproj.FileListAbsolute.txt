@@ -1,0 +1,13 @@
+C:\Users\mvelasquez\source\repos\PeopleAdmin\Core\bin\Debug\netstandard2.0\Core.deps.json
+C:\Users\mvelasquez\source\repos\PeopleAdmin\Core\bin\Debug\netstandard2.0\Core.dll
+C:\Users\mvelasquez\source\repos\PeopleAdmin\Core\bin\Debug\netstandard2.0\Core.pdb
+C:\Users\mvelasquez\source\repos\PeopleAdmin\Core\bin\Debug\netstandard2.0\Data.dll
+C:\Users\mvelasquez\source\repos\PeopleAdmin\Core\bin\Debug\netstandard2.0\Data.pdb
+C:\Users\mvelasquez\source\repos\PeopleAdmin\Core\obj\Debug\netstandard2.0\Core.csproj.AssemblyReference.cache
+C:\Users\mvelasquez\source\repos\PeopleAdmin\Core\obj\Debug\netstandard2.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mvelasquez\source\repos\PeopleAdmin\Core\obj\Debug\netstandard2.0\Core.AssemblyInfoInputs.cache
+C:\Users\mvelasquez\source\repos\PeopleAdmin\Core\obj\Debug\netstandard2.0\Core.AssemblyInfo.cs
+C:\Users\mvelasquez\source\repos\PeopleAdmin\Core\obj\Debug\netstandard2.0\Core.csproj.CoreCompileInputs.cache
+C:\Users\mvelasquez\source\repos\PeopleAdmin\Core\obj\Debug\netstandard2.0\Core.csproj.CopyComplete
+C:\Users\mvelasquez\source\repos\PeopleAdmin\Core\obj\Debug\netstandard2.0\Core.dll
+C:\Users\mvelasquez\source\repos\PeopleAdmin\Core\obj\Debug\netstandard2.0\Core.pdb

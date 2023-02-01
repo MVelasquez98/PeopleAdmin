@@ -3864,32 +3864,35 @@
     ]
   },
   "packageFolders": {
-    "/home/mvelasquez@lanacion.com.ar/.nuget/packages/": {},
-    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\mvelasquez\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/mvelasquez@lanacion.com.ar/Repos/PeopleAdmin/Data/Data.csproj",
+      "projectUniqueName": "C:\\Users\\mvelasquez\\source\\repos\\PeopleAdmin\\Data\\Data.csproj",
       "projectName": "Data",
-      "projectPath": "/home/mvelasquez@lanacion.com.ar/Repos/PeopleAdmin/Data/Data.csproj",
-      "packagesPath": "/home/mvelasquez@lanacion.com.ar/.nuget/packages/",
-      "outputPath": "/home/mvelasquez@lanacion.com.ar/Repos/PeopleAdmin/Data/obj/",
+      "projectPath": "C:\\Users\\mvelasquez\\source\\repos\\PeopleAdmin\\Data\\Data.csproj",
+      "packagesPath": "C:\\Users\\mvelasquez\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mvelasquez\\source\\repos\\PeopleAdmin\\Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/home/mvelasquez@lanacion.com.ar/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\mvelasquez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "projectReferences": {}
         }
       },
@@ -3901,6 +3904,7 @@
     },
     "frameworks": {
       "netstandard2.0": {
+        "targetAlias": "netstandard2.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -3935,7 +3939,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.416/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

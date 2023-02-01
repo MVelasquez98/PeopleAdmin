@@ -1,35 +1,38 @@
 {
   "format": 1,
   "restore": {
-    "/home/mvelasquez@lanacion.com.ar/Repos/PeopleAdmin/Core/Core.csproj": {}
+    "C:\\Users\\mvelasquez\\source\\repos\\PeopleAdmin\\Core\\Core.csproj": {}
   },
   "projects": {
-    "/home/mvelasquez@lanacion.com.ar/Repos/PeopleAdmin/Core/Core.csproj": {
+    "C:\\Users\\mvelasquez\\source\\repos\\PeopleAdmin\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/mvelasquez@lanacion.com.ar/Repos/PeopleAdmin/Core/Core.csproj",
+        "projectUniqueName": "C:\\Users\\mvelasquez\\source\\repos\\PeopleAdmin\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "/home/mvelasquez@lanacion.com.ar/Repos/PeopleAdmin/Core/Core.csproj",
-        "packagesPath": "/home/mvelasquez@lanacion.com.ar/.nuget/packages/",
-        "outputPath": "/home/mvelasquez@lanacion.com.ar/Repos/PeopleAdmin/Core/obj/",
+        "projectPath": "C:\\Users\\mvelasquez\\source\\repos\\PeopleAdmin\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\mvelasquez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mvelasquez\\source\\repos\\PeopleAdmin\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/home/mvelasquez@lanacion.com.ar/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\mvelasquez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "netstandard2.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "/home/mvelasquez@lanacion.com.ar/Repos/PeopleAdmin/Data/Data.csproj": {
-                "projectPath": "/home/mvelasquez@lanacion.com.ar/Repos/PeopleAdmin/Data/Data.csproj"
+              "C:\\Users\\mvelasquez\\source\\repos\\PeopleAdmin\\Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\mvelasquez\\source\\repos\\PeopleAdmin\\Data\\Data.csproj"
               }
             }
           }
@@ -41,7 +44,16 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -52,41 +64,36 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.416/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/mvelasquez@lanacion.com.ar/Repos/PeopleAdmin/Data/Data.csproj": {
+    "C:\\Users\\mvelasquez\\source\\repos\\PeopleAdmin\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/mvelasquez@lanacion.com.ar/Repos/PeopleAdmin/Data/Data.csproj",
+        "projectUniqueName": "C:\\Users\\mvelasquez\\source\\repos\\PeopleAdmin\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "/home/mvelasquez@lanacion.com.ar/Repos/PeopleAdmin/Data/Data.csproj",
-        "packagesPath": "/home/mvelasquez@lanacion.com.ar/.nuget/packages/",
-        "outputPath": "/home/mvelasquez@lanacion.com.ar/Repos/PeopleAdmin/Data/obj/",
+        "projectPath": "C:\\Users\\mvelasquez\\source\\repos\\PeopleAdmin\\Data\\Data.csproj",
+        "packagesPath": "C:\\Users\\mvelasquez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mvelasquez\\source\\repos\\PeopleAdmin\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/home/mvelasquez@lanacion.com.ar/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\mvelasquez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
             "projectReferences": {}
           }
         },
@@ -98,6 +105,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -132,7 +140,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.416/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
