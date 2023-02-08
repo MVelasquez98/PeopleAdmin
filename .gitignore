@@ -1,0 +1,48 @@
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio files
+*.csproj
+*.sln
+*.suo
+*.user
+*.opensdf
+*.sdf
+
+# Code Analysis
+bin/Release/*.xml
+bin/Debug/*.xml
+
+# Visual Studio auto-generated files
+_UpgradeReport_Files/
+UpgradeLog.XML
+*.VisualState.xml
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio files
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+
+# Visual Studio VC++ cache
+ipch/
+
+# Visual Studio Backup files
+*~
