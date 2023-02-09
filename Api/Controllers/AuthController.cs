@@ -4,7 +4,7 @@ using Core.PersonRepository.Interfaces;
 using Data.Model;
 namespace Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/authSecurity")]
     [ApiController]
     public class AuthController : ControllerBase
     {
