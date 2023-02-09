@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using System.Threading.Tasks;
 
 namespace Core.PersonRepository.Implementations
 {
@@ -16,41 +16,41 @@ namespace Core.PersonRepository.Implementations
         {
             _context = context;
         }
-        public void Add(Person person)
+        public async Task Add(Person person)
         {
-            _context.Persons.Add(person);
-            _context.SaveChanges();
+            await _context.Persons.AddAsync(person);
+            await _context.SaveChangesAsync();
         }
 
-        public void Delete(int id)
+        public async Task Delete(int id)
         {
-            var person = _context.Persons.Find(id);
-            _context.Persons.Remove(person);
-            _context.SaveChanges();
+            var person = await _context.Persons.FindAsync(id);
+             _context.Persons.Remove(person);
+            await _context.SaveChangesAsync();
         }
 
-        public Person Get(int id)
+        public async Task<Person> Get(int id)
         {
-            return _context.Persons.Find(id);
+            return await _context.Persons.FindAsync(id);
         }
 
-        public List<Person> GetAll()
+        public async Task<List<Person>> GetAll()
         {
-            return _context.Persons.ToList();
+            return await _context.Persons.ToListAsync();
         }
 
-        public Person GetShuffle()
+        public async Task<Person> GetShuffle()
         {
             int count = _context.Persons.Count();
             int randomId = new Random().Next(1, count + 1);
-            Person randomPerson = _context.Persons.Find(randomId);
+            Person randomPerson = await _context.Persons.FindAsync(randomId);
             return randomPerson;
         }
 
-        public void Update(Person person)
+        public async Task Update(Person person)
         {
             _context.Entry(person).State = EntityState.Modified;
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
     }
 }

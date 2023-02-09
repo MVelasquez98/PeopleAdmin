@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Api.Controllers
 {
@@ -28,10 +29,10 @@ namespace Api.Controllers
             Tags = new[] { "Personas" }
         )]
         [HttpGet]
-        public ActionResult<List<Person>> Get()
+        public async Task<ActionResult<List<Person>>> Get()
         {
-            var persons = _personRepository.GetAll();
-            if (persons.Count != 0) return Ok(_personRepository.GetAll());
+            var persons = await _personRepository.GetAll();
+            if (persons.Count != 0) return Ok(persons);
             return StatusCode(204, "La lista de personas esta vacia");
         }
 
@@ -40,9 +41,9 @@ namespace Api.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet("{id}")]
-        public ActionResult<Person> Get(int id)
+        public async Task<ActionResult<Person>> Get(int id)
         {
-            var person = _personRepository.Get(id);
+            var person = await _personRepository.Get(id);
             if (person == null)
             {
                 return NotFound();
@@ -55,9 +56,9 @@ namespace Api.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet("shuffle")]
-        public ActionResult<Person> GetShuffle()
+        public async Task<ActionResult<Person>> GetShuffle()
         {
-            var person = _personRepository.GetShuffle();
+            var person = await _personRepository.GetShuffle();
             if (person == null)
             {
                 return NotFound();
@@ -70,9 +71,9 @@ namespace Api.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        public ActionResult<Person> Post(Person person)
+        public async Task<ActionResult<Person>> Post(Person person)
         {
-            _personRepository.Add(person);
+            await _personRepository.Add(person);
             return CreatedAtAction(nameof(Get), new { id = person.PersonId }, person);
         }
 
@@ -81,13 +82,13 @@ namespace Api.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPut("{id}")]
-        public ActionResult<Person> Put(int id, Person person)
+        public async Task<ActionResult> Put(int id, Person person)
         {
             if (id != person.PersonId)
             {
                 return BadRequest();
             }
-            _personRepository.Update(person);
+            await _personRepository.Update(person);
             return NoContent();
         }
 
@@ -96,14 +97,14 @@ namespace Api.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpDelete("{id}")]
-        public ActionResult<Person> Delete(int id)
+        public async Task<ActionResult> Delete(int id)
         {
-            var person = _personRepository.Get(id);
+            var person = await _personRepository.Get(id);
             if (person == null)
             {
                 return NotFound();
             }
-            _personRepository.Delete(id);
+            await _personRepository.Delete(id);
             return NoContent();
         }
     }
