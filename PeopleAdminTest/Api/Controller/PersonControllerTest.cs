@@ -7,6 +7,7 @@ using Moq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace PeopleAdminTest.Api.Controller
 {
@@ -31,32 +32,33 @@ namespace PeopleAdminTest.Api.Controller
         }
 
         [TestMethod]
-        public void Get_ShouldReturnAllPersons()
+        public async Task Get_ShouldReturnAllPersons()
         {
             // Arrange
-            _repository.Setup(repo => repo.GetAll()).Returns(_persons);
+            _repository.Setup(repo => repo.GetAll()).ReturnsAsync(_persons);
 
             // Act
-            var result = _controller.Get().Result;
+            var result = await _controller.Get();
 
             // Assert
-            Assert.IsInstanceOfType(result, typeof(OkObjectResult));
-            var returnedPersons = (result as OkObjectResult).Value as List<Person>;
+            Assert.IsInstanceOfType(result.Result, typeof(OkObjectResult));
+            var okResult = (OkObjectResult)result.Result;
+            var returnedPersons = (List<Person>)okResult.Value;
             Assert.IsNotNull(returnedPersons);
             Assert.AreEqual(2, returnedPersons.Count);
 
         }
         [TestMethod]
-        public void Get_ShouldReturnPersonById()
+        public async Task Get_ShouldReturnPersonById()
         {
             // Arrange
-            _repository.Setup(repo => repo.Get(1)).Returns(_persons[0]);
+            _repository.Setup(repo => repo.Get(1)).ReturnsAsync(_persons[0]);
 
             // Act
-            var result = _controller.Get(1).Result;
+            var result = await _controller.Get(1);
 
             // Assert
-            var okResult = result as OkObjectResult;
+            var okResult = (OkObjectResult)result.Result;
             Assert.IsNotNull(okResult);
             var returnedPerson = okResult.Value as Person;
             Assert.IsNotNull(returnedPerson);
@@ -67,17 +69,17 @@ namespace PeopleAdminTest.Api.Controller
         }
 
         [TestMethod]
-        public void Post_ShouldAddPerson()
+        public async Task Post_ShouldAddPerson()
         {
             // Arrange
             var person = _persons[0];
             _repository.Setup(repo => repo.Add(person)).Callback(() => { });
 
             // Act
-            var result = _controller.Post(person).Result;
+            var result = await _controller.Post(person);
 
             // Assert
-            var createdResult = result as CreatedAtActionResult;
+            var createdResult = (CreatedAtActionResult)result.Result;
             Assert.IsNotNull(createdResult);
             var returnedPerson = createdResult.Value as Person;
             Assert.IsNotNull(returnedPerson);
@@ -88,7 +90,7 @@ namespace PeopleAdminTest.Api.Controller
         }
 
         [TestMethod]
-        public void Put_ShouldUpdatePerson()
+        public async Task Put_ShouldUpdatePerson()
         {
             // Arrange
             var personToUpdate = _persons[0];
@@ -98,7 +100,7 @@ namespace PeopleAdminTest.Api.Controller
             });
 
             // Act
-            var result = _controller.Put(1, new Person { PersonId = 1, Name = "Matias Alejandro" }).Result;
+            var result = await _controller.Put(1, new Person { PersonId = 1, Name = "Matias Alejandro" });
 
             // Assert
             Assert.IsInstanceOfType(result, typeof(NoContentResult));
@@ -107,12 +109,12 @@ namespace PeopleAdminTest.Api.Controller
         }
 
         [TestMethod]
-        public void Delete_ShouldRemovePerson()
+        public async Task Delete_ShouldRemovePerson()
         {
             // Arrange
             var personToDelete = _persons[0];
             //necesito mock del get porque lo utilizo en el delete para saber si existe
-            _repository.Setup(repo => repo.Get(It.IsAny<int>())).Returns((int id) =>
+            _repository.Setup(repo => repo.Get(It.IsAny<int>())).ReturnsAsync((int id) =>
             {
                 return _persons.FirstOrDefault(p => p.PersonId == id);
             });
@@ -122,14 +124,14 @@ namespace PeopleAdminTest.Api.Controller
             });
 
             // Act
-            var result = _controller.Delete(1).Result;
+            var result = await _controller.Delete(1);
 
             // Assert
             Assert.IsInstanceOfType(result, typeof(NoContentResult));
             _repository.Verify(repo => repo.Delete(It.IsAny<int>()), Times.Once());
         }
         [TestMethod]
-        public void GetShuffle_ShouldReturnRandomPerson()
+        public async Task GetShuffle_ShouldReturnRandomPerson()
         {
             // Arrange
             var persons = new List<Person>()
@@ -138,18 +140,18 @@ namespace PeopleAdminTest.Api.Controller
         new Person { PersonId = 2, Name = "Person 2" },
         new Person { PersonId = 3, Name = "Person 3" }
     };
-            _repository.Setup(repo => repo.GetShuffle()).Returns(() =>
+            _repository.Setup(repo => repo.GetShuffle()).ReturnsAsync(() =>
             {
                 int randomIndex = new Random().Next(persons.Count);
                 return persons[randomIndex];
             });
 
             // Act
-            var result = _controller.GetShuffle().Result as OkObjectResult;
-
+            var result = await _controller.GetShuffle();
+            var okResult = (OkObjectResult)result.Result;
             // Assert
-            Assert.IsInstanceOfType(result, typeof(OkObjectResult));
-            Assert.IsInstanceOfType(result.Value, typeof(Person));
+            Assert.IsInstanceOfType(okResult, typeof(OkObjectResult));
+            Assert.IsInstanceOfType(okResult.Value, typeof(Person));
         }
     }
 }

@@ -14,7 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{C797C82A-955
 		doc\commands.md = doc\commands.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleAdminTest", "PeopleAdminTest\PeopleAdminTest.csproj", "{6CE5F53F-B943-4CA3-B62A-B1492B66F7CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PeopleAdminTest", "PeopleAdminTest\PeopleAdminTest.csproj", "{6CE5F53F-B943-4CA3-B62A-B1492B66F7CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
